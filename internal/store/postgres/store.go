@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/amaanworks/todo-app/internal/todo"
+	"github.com/dexisback/terraform-app/internal/todo"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 )

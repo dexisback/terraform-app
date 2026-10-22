@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/amaanworks/todo-app/internal/todo"
+	"github.com/dexisback/terraform-app/internal/todo"
 	"github.com/go-chi/chi/v5"
 	chimiddleware "github.com/go-chi/chi/v5/middleware"
 )

@@ -8,7 +8,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/amaanworks/todo-app/internal/todo"
+	"github.com/dexisback/terraform-app/internal/todo"
 )
 
 type fakeStore struct{}

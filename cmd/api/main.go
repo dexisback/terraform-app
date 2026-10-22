@@ -10,9 +10,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/amaanworks/todo-app/internal/config"
-	"github.com/amaanworks/todo-app/internal/httpapi"
-	"github.com/amaanworks/todo-app/internal/store/postgres"
+	"github.com/dexisback/terraform-app/internal/config"
+	"github.com/dexisback/terraform-app/internal/httpapi"
+	"github.com/dexisback/terraform-app/internal/store/postgres"
 )
 
 func main() {

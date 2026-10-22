@@ -22,3 +22,9 @@ coverage.out
 
 # Local database data
 postgres-data/
+
+
+
+
+# personal docs:
+notes.md

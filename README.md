@@ -4,7 +4,7 @@ A small Go + PostgreSQL API used as the application repository for a platform-en
 
 ## Prerequisites
 
-- Go 1.23+
+- Go 1.27+
 - Docker Engine and Docker Compose plugin
 
 ## Run locally with Go

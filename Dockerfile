@@ -1,16 +1,17 @@
-# Build stage: compile a static Go binary.
-FROM golang:1.23-alpine AS build
+# Build stage
+FROM golang:1.27-alpine AS build
 WORKDIR /src
-RUN apk add --no-cache ca-certificates
-COPY go.mod ./
+COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags="-s -w" -o /out/todo-api ./cmd/api
 
-# Runtime stage: no Go compiler or source tree in the final image.
-FROM gcr.io/distroless/static-debian12:nonroot
+# Runtime stage
+FROM alpine:3.22
 WORKDIR /
+RUN apk add --no-cache ca-certificates \
+    && adduser -D -H -s /sbin/nologin nonroot
 COPY --from=build /out/todo-api /todo-api
 EXPOSE 8080
-USER nonroot:nonroot
+USER nonroot
 ENTRYPOINT ["/todo-api"]
